@@ -2,6 +2,7 @@ package two_pointers;
 
 public class RemoveDuplicates {
 
+    // 26
     public static int removeDuplicates(int[] nums) {
         int l = 1;
         for(int i = 0 ; i < nums.length - 1; i++) {
