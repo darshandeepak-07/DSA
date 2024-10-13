@@ -2,6 +2,7 @@ package two_pointers;
 
 public class FirstOccurence {
 
+    // 28
     public static int strStr(String haystack, String needle) {
         for(int i = 0; i <= haystack.length() - needle.length(); i++){
             int j = 0;
