@@ -1,9 +1,9 @@
 package two_pointers;
 
-class ListNode {
+class ListNode1 {
     int val;
-    ListNode next;
-    ListNode(int x) {
+    ListNode1 next;
+    ListNode1(int x) {
         val = x;
         next = null;
      }
@@ -11,9 +11,9 @@ class ListNode {
 
 public class IntersectionTwoLL {
 
-    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
-        ListNode nodeA = headA;
-        ListNode nodeB = headB;
+    public ListNode1 getIntersectionNode(ListNode1 headA, ListNode1 headB) {
+        ListNode1 nodeA = headA;
+        ListNode1 nodeB = headB;
 
         while(nodeA != nodeB) {
             nodeA = (nodeA != null) ? nodeA.next : headB;
