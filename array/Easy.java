@@ -120,6 +120,23 @@ public class Easy {
         return expectedSum - sum;
     }
 
+    // Problem 8 - Find max of consecutive occurences of 1
+    public int findMaxConsecutiveOnes(int[] nums) {
+        int count = 0;
+        int maxCount = 0;
+
+        for (int num : nums) {
+            if (num == 1) {
+                count++;
+                maxCount = Math.max(maxCount, count);
+            } else {
+                count = 0;
+            }
+        }
+
+        return maxCount;
+    }
+
     public static void main(String[] args) {
 
     }
