@@ -1,9 +1,6 @@
 package array;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 
 public class Easy {
 
@@ -135,6 +132,30 @@ public class Easy {
         }
 
         return maxCount;
+    }
+
+    // Problem 9 - Find the number which is present only once
+    public int singleNumber(int[] nums) {
+        Map<Integer, Integer> map = new HashMap<>();
+
+        int key = -1;
+
+        for (int num : nums) {
+            if (map.containsKey(num)) {
+                int count = map.get(num);
+                map.put(num, ++count);
+            } else {
+                map.put(num, 1);
+            }
+        }
+
+        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+            if (entry.getValue() == 1) {
+                key = entry.getKey();
+            }
+        }
+
+        return key;
     }
 
     public static void main(String[] args) {
